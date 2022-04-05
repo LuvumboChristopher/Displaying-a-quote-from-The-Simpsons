@@ -34,10 +34,15 @@ export default function App() {
   return (
     
     <>
-      {isLoading ? <p>Loading...</p> : <div>
-      <img src={person.image} alt={person.character}/>
-      <h1>{person.character}</h1>
-      <p>{person.quote}</p> </div>}
+      {
+        isLoading ?
+        <p>Loading...</p> : 
+        <div>
+          <img src={person.image} alt={person.character}/>
+          <h1>{person.character}</h1>
+          <p>{person.quote}</p>
+        </div>
+      }
       {!isLoading && <button onClick={handleClick}>Another one</button>}
     </>
   );
